@@ -1,0 +1,25 @@
+mkdir BankingApp
+cd BankingApp
+git init
+git branch -M main
+
+echo "Digital Banking Application" > README.md
+git add .
+git commit -m "Initial commit"
+
+git switch -c login
+notepad login.html
+git add .
+git commit -m "Added Login Page"
+
+git switch main
+git switch -c registration
+notepad registration.html
+git add .
+git commit -m "Added Registration Page"
+
+git switch login
+git merge registration
+
+git branch
+dir
